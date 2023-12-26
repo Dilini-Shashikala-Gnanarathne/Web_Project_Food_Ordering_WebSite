@@ -1,31 +1,23 @@
-import { useState } from 'react';
-import database from './firebase';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/Loading';
+import MacBook from './pages/MacBook';
+
+import ContactPage from './pages/ContactPage';
 
 function App() {
-	const [name, setName] = useState();
-	const [age, setAge] = useState();
-
-	// Push Function
-	const Push = () => {
-		database.ref("user").set({
-			name: name,
-			age: age,
-		}).catch(alert);
-	}
-
-	return (
-		<div className="App" style={{ marginTop: 250 }}>
-			<center>
-				<input placeholder="Enter your name" value={name}
-					onChange={(e) => setName(e.target.value)} />
-				<br /><br />
-				<input placeholder="Enter your age" value={age}
-					onChange={(e) => setAge(e.target.value)} />
-				<br /><br />
-				<button onClick={Push}>PUSH</button>
-			</center>
-		</div>
-	);
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+		  <Route path="/maxbook" element={<MacBook />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
