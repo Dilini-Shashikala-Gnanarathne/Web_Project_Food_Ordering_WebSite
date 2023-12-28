@@ -35,3 +35,6 @@ body {
   border: 1px solid #ccc; /* Optional: Add a border to visually separate rows */
   padding: 20px; /* Optional: Add padding to rows */
 }
+.Link{
+  padding: 20px;
+}
