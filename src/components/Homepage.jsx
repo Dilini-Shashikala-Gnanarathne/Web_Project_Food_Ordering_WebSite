@@ -16,3 +16,9 @@ export const pageStyle = {
     minHeight: '100vh',
   };
   
+  export const rowsize = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Adjust as needed
+  };
+  
