@@ -67,7 +67,7 @@ const HomePage = () => {
             />
             <br />
             <br />
-            <button onClick={Push}>PUSH</button>
+            <button onClick={Push}>Enter</button>
           </center>
         </div>
       </div>
