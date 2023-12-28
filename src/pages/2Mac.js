@@ -3,6 +3,8 @@ import { useState } from 'react';
 import database from '../firebase';
 import { Link } from 'react-router-dom';
 import centerImage from '../image/2nd.png';
+import centerImage2 from '../image/Gen Xgenx.png';
+
 import '../components/HomePage.css';
 
 const HomePage = () => {
@@ -15,62 +17,91 @@ const HomePage = () => {
       age: age,
     }).catch(alert);
   };
-
-  const columnStyle = {
-    flex: 1,
-    padding: '20px',
-    boxSizing: 'border-box', // Include padding in the column size
+  const imageContainerStyle = {
+    margin: 'center',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',  // Change this to 'row'
     alignItems: 'center',
     justifyContent: 'center',
-  };
-  const imageContainerStyle = {
-    margin: 'center', // Adjust the margin around the image
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center', // Center align items horizontally
-    justifyContent: 'center', // Center align items vertically
     minHeight: '100vh',
+    
   };
-
+ 
   const pageStyle = {
     background: 'white',
   };
-
+   const columnsContainerStyle = {
+    display: 'flex',
+    width: '100%',
+  };
+  const inputLineStyle = {
+    borderBottom: '1px solid black', // You can adjust the style of the line
+    margin: '10px', // Adjust spacing as needed
+    padding: '5px', // Adjust padding as needed
+    width: '75%', // Ensures the line spans the entire width of the column
+    borderLeft: 'none', // No left border
+    borderRight: 'none', // No right border
+    borderTop: 'none', 
+  };
+  
+   const columnStyle = {
+    flex: 1,
+  };
   return (
     <div style={pageStyle}>
       <header className="header">
         {/* You can add navigation links here if needed */}
       </header>
 
-      <div className="App" style={{ marginTop: 50, display: 'flex' }}>
-        {/* First Column - Image */}
+      
+      <div style={columnsContainerStyle}>
+        {/* Left Column */}
+        <div style={columnStyle}>
         <div style={imageContainerStyle}>
-          <img src={centerImage} alt="Centered Image" />
+          <img src={centerImage} alt="Centered Image" style={{ width: '100', height: '100'}}/>
+        </div>
         </div>
 
-        {/* Second Column - Form */}
+        {/* Right Column */}
         <div style={columnStyle}>
-          <center>
-            <input
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <br />
-            <br />
-            <input
-              placeholder="Enter your age"
-              value={age}
-              onChange={(e) => setAge(e.target.value)}
-            />
-            <br />
-            <br />
-            <button onClick={Push}>Enter</button>
-          </center>
+        <center >
+        <div style={{marginTop:'100px'}}>
+          <img src={centerImage2} alt="Centered2 Image" />
         </div>
+
+        <p >User Name</p>
+          <input style={inputLineStyle}   
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+         
+          <br />
+          <br />
+          <p>Password</p>
+          <input
+           style={inputLineStyle} 
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+          <br />
+          <br />
+          <button onClick={Push} style={{background:'rgba(54, 72, 107, 1)', borderRadius:'6px', width:'100px',color:'white'}}>Log In</button>
+        </center>        </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <footer className="footer">
         <p style={{ fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
@@ -82,3 +113,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
