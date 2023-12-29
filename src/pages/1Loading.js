@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import centerImage from '../image/dili.png'; // Import your image
 import '../components/HomePage.css'; // Import your custom CSS file
 import '../components/Homepage.jsx';
+
 import { pageStyle, spacedTextStyle, imageContainerStyle } from '../components/Homepage.jsx';
 
 const Loading = () => {
@@ -16,7 +17,8 @@ const Loading = () => {
       </header>
 
       <div style={imageContainerStyle}>
-        <img src={centerImage} alt="Centered Image" />
+      <Link to="./Mac" className='Link'>
+        <img src={centerImage} alt="Centered Image" /></Link>
       </div>
 
       <footer className="footer">

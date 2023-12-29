@@ -22,3 +22,7 @@ export const pageStyle = {
     justifyContent: 'space-between', // Adjust as needed
   };
   
+
+  export const column1={
+    background:'red'
+  }
