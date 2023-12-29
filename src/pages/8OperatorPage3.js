@@ -14,13 +14,22 @@ const Loading = () => {
       </header>
 
       <div style={imageContainerStyle}>
-       Operator Page3
-     </div>
+        <div>
+          <div style={{ display: 'flex' }}>
+            <div className='Column1' style={{ border: '1px solid black', padding: '10px' }}>
+              AdminPage1
+            </div>
+            <div className='Column2' style={{ border: '1px solid black', padding: '10px' }}>
+              AdminPage2
+            </div>
+          </div>
+        </div>
+      </div>
 
       <footer className="footer">
         <p style={{ ...spacedTextStyle, fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
         <p style={{ fontSize: '15px', textAlign: 'center' }}>Copyright © 2023 All rights reserved by AD Printers</p>
-        {/* Link to another page */}        
+        {/* Link to another page */}
       </footer>
     </div>
   );

@@ -1,4 +1,6 @@
 import firebase from 'firebase';
+import 'firebase/auth';
+import 'firebase/database';
 
 const firebaseConfig = {
 	// Your Credentials
@@ -23,6 +25,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-var database = firebase.database();
 
-export default database;
+export const auth = firebase.auth();
+export const database = firebase.database();
