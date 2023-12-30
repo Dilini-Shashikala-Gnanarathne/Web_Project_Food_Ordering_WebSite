@@ -91,8 +91,8 @@ const LoginForm = () => {
                   <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputLineStyle} /><br /><br />
                   <p style={{ color: 'rgba(80, 104, 143, 1)', textAlign: 'left' }}>Password</p>
                   <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required style={inputLineStyle} /><br /><br />
-                  <button type="submit" style={{ background: 'rgba(54, 72, 107, 1)', borderRadius: '6px', width: '100%', height: '47px', color: 'white' }}>Login</button>
-                  <p style={{ color: 'rgba(80, 104, 143, 1)', textAlign: 'left' }}><u>Forget Password</u></p>
+                  <button type="submit" style={{ background: 'rgba(54, 72, 107, 1)', borderRadius: '6px', width: '25%', height: '47px', color: 'white' }}>Login</button>
+                  <p style={{ color: 'rgba(80, 104, 143, 1)', }}><u>Forget Password</u></p>
                   {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
                 </form>
               </center>
@@ -114,12 +114,6 @@ const LogoutLink = () => {
     await auth.signOut();
   };
 
-  return (
-    <p>
-      User logged in
-      <button onClick={handleLogout}>(logout)</button>
-    </p>
-  );
 };
 
 export { LoginForm, LogoutLink };
