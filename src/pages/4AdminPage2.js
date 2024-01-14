@@ -1,7 +1,7 @@
 // src/components/AdminPage2.js
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import firebase, { auth, database } from '../firebase'; // Adjust the path based on your project structure
 const AdminPage2 = () => {
   const [formData, setFormData] = useState({});
   const [formVisibility, setFormVisibility] = useState(false);
@@ -26,7 +26,17 @@ const AdminPage2 = () => {
     setFormData({});
     setFormVisibility(false);
   };
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   const newData = { ...formData };
 
+  //   // Push data to Firebase Realtime Database
+  //   database.ref('formData').push(newData);
+
+  //   setFormArray((prevArray) => [...prevArray, newData]);
+  //   setFormData({});
+  //   setFormVisibility(false);
+  // };
   const toggleFormVisibility = () => {
     setFormVisibility((prevVisibility) => !prevVisibility);
   };
@@ -124,6 +134,7 @@ const AdminPage2 = () => {
                   ))}
                 </tbody>
               </table>
+              
             </div>
           )}
         </div>
