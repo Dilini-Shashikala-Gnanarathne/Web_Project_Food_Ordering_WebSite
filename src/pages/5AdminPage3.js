@@ -1,16 +1,25 @@
 // src/components/AdminPage2.js
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import firebase, { auth, database } from '../firebase'; // Adjust the path based on your project structure
+import '../components/HomePage.css';
+import gen_X from '../image/Gen Xgenx.png';
+import { auth } from '../firebase';
+import icon from '../image/icons8-user-100 1.png';
+import {  spacedTextStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,
+  A_P_3_icon2, buttonIconStyle1,buttonIconStyle2,buttonIconStylei,table_data,table_header,table_footer,
+  table,footerTextStyle1,footerTextStyle2,pageStyle,imageContainerStyle,faPlusCircle
+  ,formVisibility_form,p_footer,
+
+} from '../components/Homepage.jsx';
+import { FaPlusCircle, FaSearch } from 'react-icons/fa'; 
+
 const AdminPage3 = () => {
   const [formData, setFormData] = useState({});
   const [formVisibility, setFormVisibility] = useState(false);
   const [formArray, setFormArray] = useState([]);
-
-  const location = useLocation();
-  const formDataFromURL = location.search
-    ? Object.fromEntries(new URLSearchParams(location.search))
-    : {};
+  const handleLogout = async () => {
+    await auth.signOut();
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +35,7 @@ const AdminPage3 = () => {
     setFormData({});
     setFormVisibility(false);
   };
+  
   // const handleFormSubmit = (e) => {
   //   e.preventDefault();
   //   const newData = { ...formData };
@@ -37,70 +47,69 @@ const AdminPage3 = () => {
   //   setFormData({});
   //   setFormVisibility(false);
   // };
+
   const toggleFormVisibility = () => {
     setFormVisibility((prevVisibility) => !prevVisibility);
   };
 
-  const pageStyle = {
-    // Your page styles here
-  };
-
-  const imageContainerStyle = {
-    // Your image container styles here
-  };
-
-  const buttonIconStyle = {
-    padding: '20px',
-    color: 'white',
-    background: 'rgba(6, 43, 99, 1)',
-    borderRadius: '10px',
-    width: '100%',
-    marginTop: 'auto', // Push the button to the center vertically
-  };
 
   return (
     <div style={pageStyle}>
-      <header className="header">
-        {/* You can add navigation links here if needed */}
-      </header>
+      <header className="header"> </header>
+      <div id='A_P_3_images'style={{ ...A_P_3_images}}>
+        <img src={gen_X} alt="gen_x Image" style={{ gen_X }} />
+        <div id='A_P_3_logout' style={{...A_P_3_logout}}>
+          <img src={icon} alt="Icon" style={{...A_P_3_icon1}} />
+          <button onClick={handleLogout}style={{...A_P_3_icon2}}>
+            Log Off
+          </button>
+        </div>
+      </div>
 
       {formVisibility ? (
         <div style={{ marginTop: '100px' }}>
+          
           <form
-            style={{
-              margin: 'auto',
-              padding: '15px',
-              maxWidth: '400px',
-              alignContent: 'center',
-            }}
+            style={{...formVisibility_form }}
             id="FormInput"
-            onSubmit={handleFormSubmit}
-          >
-            <label htmlFor="name">Name</label>
+            onSubmit={handleFormSubmit}>
+              <p>
+            User Details Sheet
+          </p>
+            <label htmlFor="User Name">User Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name........"
-              value={formData.name || ''}
+              id="User_Name"
+              name="User_Name"
+              placeholder="User Name"
+              value={formData.User_Name || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="email">Email</label>
+              <label htmlFor="User ID">User ID</label>
             <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email........"
-              value={formData.email || ''}
+              type="text"
+              id="User_ID"
+              name="User_ID"
+              placeholder="User ID"
+              value={formData.User_ID || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="contact">Contact</label>
+            <label htmlFor="Password">Password</label>
             <input
-              type="number"
-              id="contact"
-              name="contact"
-              placeholder="Your Contact Number........"
-              value={formData.contact || ''}
+              type="password"
+              id="Password"
+              name="Password"
+              placeholder="Password"
+              value={formData.Password || ''}
+              onChange={handleInputChange}
+            />
+             <label htmlFor="NIC">NIC</label>
+            <input
+              type="text"
+              id="NIC"
+              name="NIC"
+              placeholder="NIC"
+              value={formData.NIC || ''}
               onChange={handleInputChange}
             />
             <input type="submit" value="Submit" />
@@ -108,41 +117,59 @@ const AdminPage3 = () => {
         </div>
       )  : (
         <div style={imageContainerStyle}>
-          AdminPage2Dilinigggggggggggggggggggg
-          <button style={buttonIconStyle} onClick={toggleFormVisibility}>
-            Generator Management
+          <button style={{...buttonIconStyle1}} onClick={toggleFormVisibility}>
+          Add User <FaPlusCircle style={{...faPlusCircle  }} />
           </button>
-
-          {formArray.length > 0 && (
-            <div style={{ marginTop: '20px' }}>
-              <h2>Form Data Table:</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Contact</th>
+          <input
+            type="text"
+            style={{ ...buttonIconStyle2 }}
+            placeholder="Search Users"
+            onChange={handleInputChange}
+          />
+         <FaSearch style={{ ...buttonIconStylei }} />
+          {formArray.length > -1 && (
+              <div>
+              <table style={{ ...table }}>
+              <thead>
+                <tr>
+                  <th style={{ ...table_header }}>User Name</th>
+                  <th style={{ ...table_header }}>User ID</th>
+                  <th style={{ ...table_header }}>Password</th>
+                  <th style={{ ...table_header }}>NIC</th>
+                  <th style={{ ...table_header }}>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {formArray.map((data, index) => (
+                  <tr key={index} style={{ borderBottom: '2px solid rgba(0, 0, 0, 0.25)' }}>
+                    <td style={{ ...table_data }}>{data.User_Name}</td>
+                    <td style={{ ...table_data }}>{data.User_ID}</td>
+                    <td style={{ ...table_data }}>{data.Password}</td>
+                    <td style={{ ...table_data }}>{data.NIC}</td>
+                    <td style={{ ...table_data }}>{data.Actions}</td>
                   </tr>
-                </thead>
-                <tbody>
-                  {formArray.map((data, index) => (
-                    <tr key={index}>
-                      <td>{data.name}</td>
-                      <td>{data.email}</td>
-                      <td>{data.contact}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              
+                ))}
+              </tbody>
+              <tfoot style={{ ...table_footer }}>
+                <tr style={{ textAlign: 'center' }}>
+                  &lt; 1,2,3,4 &gt;
+                </tr>
+              </tfoot>
+            </table>
+            <div>
+            <p style={{ ...p_footer }}>
+              <a href="/AdminPage1" style={{ textDecoration: 'none' }}>
+                &lt; Back
+              </a>
+            </p>
             </div>
-          )}
-        </div>
-      )}
-
+            </div>)}
+            </div>)}
+            
+         
       <footer className="footer">
-        <p style={{ fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
-        <p style={{ fontSize: '15px', textAlign: 'center' }}>Copyright © 2023 All rights reserved by AD Printers</p>
+      <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
+      <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
       </footer>
     </div>
   );
