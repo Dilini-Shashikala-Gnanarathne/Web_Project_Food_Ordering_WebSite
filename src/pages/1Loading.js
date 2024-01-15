@@ -5,7 +5,7 @@ import centerImage from '../image/dili.png'; // Import your image
 import '../components/HomePage.css'; // Import your custom CSS file
 import '../components/Homepage.jsx';
 
-import { pageStyle, spacedTextStyle, imageContainerStyle } from '../components/Homepage.jsx';
+import { pageStyle, spacedTextStyle, footerTextStyle1,footerTextStyle2,imageContainerStyle } from '../components/Homepage.jsx';
 
 const Loading = () => {
   // Define your styles here
@@ -22,8 +22,8 @@ const Loading = () => {
       </div>
 
       <footer className="footer">
-        <p style={{ ...spacedTextStyle, fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
-        <p style={{ fontSize: '15px', textAlign: 'center' }}>Copyright © 2023 All rights reserved by AD Printers</p>  
+      <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
+      <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
       </footer>
     </div>
   );
