@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import gen_X from '../image/Gen Xgenx.png';
 import icon from '../image/icons8-user-100 1.png';
 import '../components/HomePage.css';
-import { pageStyle,A_P_3_logout, spacedTextStyle,A_P_3_images, A_P_3_icon1,A_P_3_icon2,imageContainerStyle } from '../components/Homepage.jsx';
+import { pageStyle,A_P_3_logout, spacedTextStyle,A_P_3_images, footerTextStyle1,footerTextStyle2,A_P_3_icon1,A_P_3_icon2,imageContainerStyle } from '../components/Homepage.jsx';
 import { auth } from '../firebase';
 import admin from '../image/Admin.png';
 
@@ -74,8 +74,8 @@ const LogoutLink = () => {
         </div>
       </div>
       <footer className="footer">
-        <p style={{ ...spacedTextStyle, fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
-        <p style={{ fontSize: '15px', textAlign: 'center' }}>Copyright © 2023 All rights reserved by AD Printers</p>
+      <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
+      <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
       </footer>
     </div>
   );
