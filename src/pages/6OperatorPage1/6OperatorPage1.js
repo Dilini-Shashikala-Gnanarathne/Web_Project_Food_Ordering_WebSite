@@ -1,47 +1,19 @@
 // src/components/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import gen_X from '../image/Gen Xgenx.png';
-import icon from '../image/icons8-user-100 1.png';
-import '../components/HomePage.css';
-import { pageStyle,A_P_3_logout, spacedTextStyle,A_P_3_images, footerTextStyle1,footerTextStyle2,A_P_3_icon1,A_P_3_icon2,imageContainerStyle } from '../components/Homepage.jsx';
-import { auth } from '../firebase';
-import admin from '../image/Admin.png';
+import gen_X from '../../image/Gen Xgenx.png';
+import icon from '../../image/icons8-user-100 1.png';
+import '../../components/HomePage.css';
+import { pageStyle,A_P_3_logout, spacedTextStyle,A_P_3_images, 
+  footerTextStyle1,footerTextStyle2,A_P_3_icon1,A_P_3_icon2,buttonIcon,
+  imageContainerStyle,column2WrapperStyle,adminIcon,addminP } from './OperatorPage1.jsx';
+import { auth } from '../../firebase';
+import admin from '../../image/Admin.png';
 
 const LogoutLink = () => {
   const handleLogout = async () => {
     await auth.signOut();
   };
-
-  const column2WrapperStyle = {
-    boxShadow: '5px 5px 10px rgba(210, 76, 92, 1)',
-    width: '400px',
-    margin: '0 120px',
-    padding: '20px',
-    boxSizing: 'border-box',
-    height: '480px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    //justifyContent: 'center',
-  };
-
-  const buttonIcon = {
-    padding: '20px',
-    color: 'white',
-    background: 'rgba(6, 43, 99, 1)',
-    borderRadius: '10px',
-    width: '100%',
-    marginTop: 'auto', // Push the button to the center vertically
-  };
-  const adminIcon={
-    marginTop:'1px',
-    paddingTop:'55px',
-  };
-  const addminP={
-    paddingTop:'20px',
-    paddingBottom:'40px'
-  }
 
   return (
     <div style={pageStyle}>
