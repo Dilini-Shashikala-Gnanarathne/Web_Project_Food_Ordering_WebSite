@@ -1,11 +1,10 @@
 // src/components/HomePage.js
 import React from 'react';
-import '../components/HomePage.css'; // Import your custom CSS file
-import '../components/Homepage.jsx';
-import { auth } from '../firebase';
-import gen_X from '../image/Gen Xgenx.png';
-import icon from '../image/icons8-user-100 1.png';
-import { pageStyle, spacedTextStyle,footerTextStyle1,footerTextStyle2, imageContainerStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2 } from '../components/Homepage.jsx';
+import '../../components/HomePage.css'; // Import your custom CSS file
+import { auth } from '../../firebase';
+import gen_X from '../../image/Gen Xgenx.png';
+import icon from '../../image/icons8-user-100 1.png';
+import { pageStyle, spacedTextStyle,footerTextStyle1,footerTextStyle2, imageContainerStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2 } from './OperatorPage2.jsx';
 
 const OperatorPage2 = () => {
   // Define your styles here
@@ -25,21 +24,10 @@ const OperatorPage2 = () => {
         </div>
       </div>
       <div style={imageContainerStyle}>
-        <div>
-          <p>Operators</p>
-          <div style={{ display: 'flex' }}>
-            <div className='Column1' style={{ border: '1px solid black', padding: '10px' }}>
-              AdminPage1
-            </div>
-            <div className='Column2' style={{ border: '1px solid black', padding: '10px' }}>
-              AdminPage2
-            </div>
-          </div>
-        </div>
-      </div>
+       Operator Page2_ DashBord
+     </div>
 
-
-      <footer className="footer">
+     <footer className="footer">
       <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
       <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
       </footer>
@@ -48,8 +36,3 @@ const OperatorPage2 = () => {
 };
 
 export default OperatorPage2;
-
-
-
-
-

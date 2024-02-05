@@ -1,14 +1,16 @@
 // src/components/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import gen_X from '../image/Gen Xgenx.png';
-import icon from '../image/icons8-user-100 1.png';
-import '../components/HomePage.css';
-import { pageStyle, spacedTextStyle, imageContainerStyle,adminIcon,addminP,buttonIcon,column2WrapperStyle
-  ,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2,Column2WrapperRow,footerTextStyle1,footerTextStyle2
-} from '../components/Homepage.jsx';
-import { auth } from '../firebase';
-import admin from '../image/Admin.png';
+import gen_X from '../../image/Gen Xgenx.png';
+import icon from '../../image/icons8-user-100 1.png';
+import '../../components/HomePage.css';
+import { pageStyle, spacedTextStyle, imageContainerStyle,
+  adminIcon,addminP,buttonIcon,column2WrapperStyle
+  ,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2,
+  Column2WrapperRow,footerTextStyle1,footerTextStyle2
+} from './AdminPage1.jsx';
+import { auth } from '../../firebase.js';
+import admin from '../../image/Admin.png';
 
 const LogoutLink = () => {
   const handleLogout = async () => {
