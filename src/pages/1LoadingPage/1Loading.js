@@ -34,7 +34,7 @@ const Loading = () => {
 
 
 
-        <img src={centerImage} alt="Centered Image" />
+        <img src={centerImage} alt="Centered Image" />fggggggggggggggg
       </div>
 
       <footer className="footer">
