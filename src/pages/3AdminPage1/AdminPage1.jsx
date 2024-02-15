@@ -48,7 +48,7 @@ export const pageStyle = {
       }
 
   export const column2WrapperStyle={
-    boxShadow: '5px 5px 10px rgba(210, 76, 92, 1)',
+    boxShadow: '15px 15px 15px 15px rgba(13, 15, 20, 0.1)',     
     width: '400px',
     margin: '0 120px',
     padding: '20px',

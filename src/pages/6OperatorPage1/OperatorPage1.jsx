@@ -27,7 +27,7 @@ export const pageStyle = {
 
   //-----------------------------3AdminPage1
   export const column2WrapperStyle={
-    boxShadow: '5px 5px 10px rgba(210, 76, 92, 1)',
+    boxShadow: '15px 15px 15px 15px rgba(13, 15, 20, 0.1)', 
     width: '400px',
     margin: '0 120px',
     padding: '20px',
@@ -36,7 +36,7 @@ export const pageStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    //justifyContent: 'center',
+
     }
     export const buttonIcon={
       padding: '20px',
@@ -44,7 +44,7 @@ export const pageStyle = {
       background: 'rgba(6, 43, 99, 1)',
       borderRadius: '10px',
       width: '100%',
-      marginTop: 'auto', // Push the button to the center vertically
+      marginTop: 'auto', 
       }  
     export const adminIcon={
       marginTop:'1px',
