@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import centerImage from '../../image/GenX.png'; // Import your image
+import { useNavigate } from 'react-router-dom';
+import centerImage from '../../image/GenX.png'; 
 import { pageStyle, spacedTextStyle, footerTextStyle1,footerTextStyle2,imageContainerStyle } from './Loding.jsx';
 const Loading = () => {
 
@@ -8,10 +8,10 @@ const Loading = () => {
   
     useEffect(() => {
       const timer = setTimeout(() => {
-        navigate('/Mac'); // Replace '/login' with the path to your login page
-      }, 5000); // 3000 milliseconds = 3 seconds
+        navigate('/Mac'); 
+      }, 5000); 
   
-      return () => clearTimeout(timer); // Cleanup function to clear the timer if component unmounts
+      return () => clearTimeout(timer); 
     }, [navigate]);
 
 
@@ -21,20 +21,7 @@ const Loading = () => {
       </header>
 
       <div style={imageContainerStyle}>
-      <Link to="/OperatorPage1">
-              <button >Generator 1 List</button>
-            </Link>
-            <Link to="/OperatorPage2">
-              <button >Generator 2 List</button>
-            </Link>
-            <Link to="/OperatorPage3">
-              <button >Generator  3 List</button>
-            </Link>
-
-
-
-
-        <img src={centerImage} alt="Centered Image" />fggggggggggggggg
+        <img src={centerImage} alt="Centered Image" />
       </div>
 
       <footer className="footer">

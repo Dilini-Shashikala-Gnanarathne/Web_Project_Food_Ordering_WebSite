@@ -13,6 +13,7 @@ import admin from '../../image/Admin.png';
 const LogoutLink = () => {
   const handleLogout = async () => {
     await auth.signOut();
+    window.location.href = '/Mac';
   };
 
   return (
