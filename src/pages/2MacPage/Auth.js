@@ -1,10 +1,8 @@
-// Auth.js
 import React, { useState } from 'react';
 import { auth } from '../../firebase.js';
 import centerImage from '../../image/2nd.png';
 import centerImage2 from '../../image/Gen Xgenx.png';
-import {pageStyle,imageContainerStyle,column1Style,column2WrapperStyle,column2Style,inputLineStyle} from './Auth.jsx';
-
+import {spacedTextStyle,footerTextStyle1,footerTextStyle2,pageStyle,imageContainerStyle,column2WrapperStyle1,column2WrapperStyle2,centerImageS,imageContainerStyle2,column2Style,inputLineStyle} from './Auth.jsx';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,11 +27,11 @@ const LoginForm = () => {
       <header className="header"></header>
 
       <div style={imageContainerStyle}>
-        <div style={{ display: 'flex', width: '80%' }}>
-          <div className='Column1' style={column1Style}>
-            <img src={centerImage} alt="Centered Image" style={{ width: '100%', height: '100%' }} />
+        <div style={imageContainerStyle2}>
+        <div className='Column2Wrapper' style={column2WrapperStyle1}>
+            <img src={centerImage} alt="Centered Image" style={centerImageS} />
           </div>
-          <div className='Column2Wrapper' style={column2WrapperStyle}>
+          <div className='Column2Wrapper' style={column2WrapperStyle2}>
             <div className='Column2' style={column2Style}>
               <center>
                 <div style={{ marginTop: '20px' }}>
@@ -54,9 +52,10 @@ const LoginForm = () => {
         </div>
       </div>
 
+     
       <footer className="footer">
-        <p style={{ fontSize: '30px', textAlign: 'center' }}>GENERATOR X INDUSTRIES</p>
-        <p style={{ fontSize: '15px', textAlign: 'center' }}>Copyright © 2023 All rights reserved by AD Printers</p>
+      <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
+      <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
       </footer>
     </div>
   );
