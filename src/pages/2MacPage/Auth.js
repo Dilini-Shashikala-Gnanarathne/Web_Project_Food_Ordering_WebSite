@@ -1,9 +1,9 @@
 // Auth.js
 import React, { useState } from 'react';
-import { auth } from '../firebase';
-
-import centerImage from '../image/2nd.png';
-import centerImage2 from '../image/Gen Xgenx.png';
+import { auth } from '../../firebase.js';
+import centerImage from '../../image/2nd.png';
+import centerImage2 from '../../image/Gen Xgenx.png';
+import {pageStyle,imageContainerStyle,column1Style,column2WrapperStyle,column2Style,inputLineStyle} from './Auth.jsx';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -23,63 +23,16 @@ const LoginForm = () => {
     }
   };
 
-  const imageContainerStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '100vh',
-  };
-
-  const pageStyle = {
-    background: 'white',
-  };
-
-  const column1Style = {
-    flex: '1', // Take up remaining space
-    padding: '20px',
-    boxSizing: 'border-box',
-
-  };
-
-  const column2WrapperStyle = {
-    boxShadow: '5px 5px 10px rgba(13, 15, 20, 0.1)', // Adjusted shadow color and opacity
-    width: '40%', // Width of the wrapper
-    margin: '0 20px', // Adjust margin as needed
-  };
-
-  const column2Style = {
-    padding: '20px',
-    boxSizing: 'border-box',
-  };
-
-  const inputLineStyle = {
-    borderBottom: '1px solid black',
-    margin: '10px',
-    padding: '5px',
-    width: '100%', // Adjusted to full width
-    borderLeft: 'none',
-    borderRight: 'none',
-    borderTop: 'none',
-  };
-
+ 
   return (
     <div style={pageStyle}>
-      <header className="header">{/* You can add navigation links here if needed */}</header>
+      <header className="header"></header>
 
       <div style={imageContainerStyle}>
         <div style={{ display: 'flex', width: '80%' }}>
-
-
-
-          {/* Column1 with image */}
           <div className='Column1' style={column1Style}>
             <img src={centerImage} alt="Centered Image" style={{ width: '100%', height: '100%' }} />
           </div>
-
-
-
-          {/* Wrapper around Column2 with red shadow */}
           <div className='Column2Wrapper' style={column2WrapperStyle}>
             <div className='Column2' style={column2Style}>
               <center>

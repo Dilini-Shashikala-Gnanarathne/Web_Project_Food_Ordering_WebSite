@@ -7,9 +7,9 @@ import icon from '../../image/icons8-user-100 1.png';
 import { pageStyle, spacedTextStyle,footerTextStyle1,footerTextStyle2, imageContainerStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2 } from './OperatorPage2.jsx';
 
 const OperatorPage2 = () => {
-  // Define your styles here
   const handleLogout = async () => {
     await auth.signOut();
+    window.location.href = '/Mac';
   };
   return (
     <div style={pageStyle}>

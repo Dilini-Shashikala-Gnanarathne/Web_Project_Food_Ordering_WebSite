@@ -1,6 +1,6 @@
 // src/components/AdminPage2.js
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, navigate } from 'react-router-dom';
 import '../../components/HomePage.css';
 import gen_X from '../../image/Gen Xgenx.png';
 import { auth } from '../../firebase.js';
@@ -8,18 +8,23 @@ import icon from '../../image/icons8-user-100 1.png';
 import {  spacedTextStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,
   A_P_3_icon2, buttonIconStyle1,buttonIconStyle2,buttonIconStylei,table_data,table_header,table_footer,
   table,footerTextStyle1,footerTextStyle2,pageStyle,imageContainerStyle,faPlusCircle
-  ,formVisibility_form,p_footer,
-
-} from './AdminPage2.jsx';
+  ,formVisibility_form,p_footer,} from './AdminPage2.jsx';
 import { FaPlusCircle, FaSearch } from 'react-icons/fa'; 
 
 const AdminPage2 = () => {
   const [formData, setFormData] = useState({});
   const [formVisibility, setFormVisibility] = useState(false);
   const [formArray, setFormArray] = useState([]);
-  const handleLogout = async () => {
-    await auth.signOut();
-  };
+
+  // const handleLogout = async () => {
+  //   await auth.signOut();
+  // };
+
+    const handleLogout = async () => {
+      await auth.signOut();
+      window.location.href = '/Mac';
+    };
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,18 +40,6 @@ const AdminPage2 = () => {
     setFormData({});
     setFormVisibility(false);
   };
-  
-  // const handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   const newData = { ...formData };
-
-  //   // Push data to Firebase Realtime Database
-  //   database.ref('formData').push(newData);
-
-  //   setFormArray((prevArray) => [...prevArray, newData]);
-  //   setFormData({});
-  //   setFormVisibility(false);
-  // };
 
   const toggleFormVisibility = () => {
     setFormVisibility((prevVisibility) => !prevVisibility);

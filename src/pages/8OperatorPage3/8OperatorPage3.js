@@ -4,12 +4,14 @@ import '../../components/HomePage.css'; // Import your custom CSS file
 import { auth } from '../../firebase';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';
+import {  Link } from 'react-router-dom';
+
 import { pageStyle, spacedTextStyle,footerTextStyle1,footerTextStyle2, imageContainerStyle,A_P_3_images,A_P_3_logout,A_P_3_icon1,A_P_3_icon2 } from './OperatorPage3.jsx';
 
 const OperatorPage2 = () => {
-  // Define your styles here
   const handleLogout = async () => {
     await auth.signOut();
+    window.location.href = '/Mac';
   };
   return (
     <div style={pageStyle}>
@@ -32,6 +34,19 @@ const OperatorPage2 = () => {
             </div>
             <div className='Column2' style={{ border: '1px solid black', padding: '10px' }}>
               AdminPage2
+
+              <Link to="/OperatorPage1">
+              <button >Generator 1 List</button>
+            </Link>
+            <Link to="/OperatorPage2">
+              <button >Generator 2 List</button>
+            </Link>
+            <Link to="/OperatorPage3">
+              <button >Generator  3 List</button>
+            </Link>
+            <Link to="/firebaseDemo">
+              <button >Generator 2 List</button>
+            </Link>
             </div>
           </div>
         </div>

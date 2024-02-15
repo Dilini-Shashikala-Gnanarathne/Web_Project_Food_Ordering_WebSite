@@ -9,6 +9,7 @@ import AdminPage3 from './pages/5AdminPage3/5AdminPage3';
 import OperatorPage1 from './pages/6OperatorPage1/6OperatorPage1';
 import OperatorPage2 from './pages/7OperatorPage2/7OperatorPage2';
 import OperatorPage3 from './pages/8OperatorPage3/8OperatorPage3';
+import FirebaseDemo from './firebaseDemo.js';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
 		      <Route path="/OperatorPage1" element={<OperatorPage1 />} />
           <Route path="/OperatorPage2" element={<OperatorPage2 />} />     
           <Route path="/OperatorPage3" element={<OperatorPage3 />} />
-          
+          <Route path='/firebaseDemo' element={<FirebaseDemo/>}/>
         </Routes>
       </Router>
     </div>
