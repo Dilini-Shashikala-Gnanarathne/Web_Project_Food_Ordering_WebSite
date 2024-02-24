@@ -1,54 +1,54 @@
-// src/components/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';
 import '../../components/HomePage.css';
-import { pageStyle,A_P_3_logout, spacedTextStyle,A_P_3_images, 
-  footerTextStyle1,footerTextStyle2,A_P_3_icon1,A_P_3_icon2,buttonIcon,
-  imageContainerStyle,column2WrapperStyle,adminIcon,addminP } from './OperatorPage1.jsx';
-import { auth } from '../../firebase';
+import { auth } from '../../firebase.js';
 import admin from '../../image/Admin.png';
+import './OperatorPage1.css';
 
 const LogoutLink = () => {
   const handleLogout = async () => {
     await auth.signOut();
-    window.location.href = '/Mac';
   };
 
   return (
-    <div style={pageStyle}>
+    <div className="page">
       <header className="header"></header>
-      <div id='A_P_3_images'style={{ ...A_P_3_images}}>
-        <img src={gen_X} alt="gen_x Image" style={{ gen_X }} />
-        <div id='A_P_3_logout' style={{...A_P_3_logout}}>
-          <img src={icon} alt="Icon" style={{...A_P_3_icon1}} />
-          <button onClick={handleLogout}style={{...A_P_3_icon2}}>
+
+      <div className="A_P_3_images">
+        <img src={gen_X} alt="gen_x Image" className="A_P_3_images" />
+        <div className="A_P_3_logout">
+          <img src={icon} alt="Icon" className="A_P_3_icon1" />
+          <button onClick={handleLogout} className="A_P_3_icon2">
             Log Off
           </button>
         </div>
       </div>
-      <div style={imageContainerStyle}>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className='Column2Wrapper' style={column2WrapperStyle}>
-            <img src={admin} style={adminIcon} alt="Admin Image" />
-            <p style={addminP}>Click here for all generator details and previous generator reports.</p>
+
+      <div className="image-container">
+        <div className="Column2WrapperRow">
+          <div className='column-2-wrapper' id="column2-wrapper-1">
+            <img src={admin} className="admin-icon" alt="Admin Image" />
+            <p className="admin-paragraph">
+            Click here for all generator details and previous generator reports. <br />
+            </p>
             <Link to="/OperatorPage3">
-              <button style={buttonIcon}>Generator List</button>
+              <button className="button-icon">Generator List</button>
             </Link>
           </div>
-          <div className='Column2Wrapper' style={column2WrapperStyle}>
-            <img src={admin} style={adminIcon} alt="Admin Image" />
-            <p style={addminP}>Click here for the generator dashboard of the selected generator.</p>
+          <div className='column-2-wrapper' id="column2-wrapper-2">
+            <img src={admin} className="admin-icon" alt="Admin Image" />
+            <p className="admin-paragraph">Click here for the generator dashboard of the selected generator. <br /></p>
             <Link to="/OperatorPage2">
-              <button style={buttonIcon}>Generator Dashboard</button>
+              <button className="button-icon">Generator Dashboard</button>
             </Link>
           </div>
         </div>
       </div>
       <footer className="footer">
-      <p style={{ ...spacedTextStyle, ...footerTextStyle1 }}>GENERATOR X INDUSTRIES</p>
-      <p style={{ ...footerTextStyle2 }}>Copyright © 2023 All rights reserved by AD Printers</p>  
+        <p className="spaced-text footer-text-1">GENERATOR X INDUSTRIES</p>
+        <p className="footer-text-2">Copyright © 2023 All rights reserved by AD Printers</p>
       </footer>
     </div>
   );
