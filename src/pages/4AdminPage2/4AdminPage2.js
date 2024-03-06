@@ -55,7 +55,10 @@ const AdminPage2 = () => {
             className="formVisibility_form"
             id="FormInput"
             onSubmit={handleFormSubmit}>
-            <label htmlFor="ID">Generator ID</label>
+            <p className='generatordetails'>Generator Details Sheet</p>
+            <br/>
+            <label htmlFor="ID" className='generatorid'>Generator ID</label>
+            <br/>
             <input
               type="text"
               id="ID"
@@ -64,7 +67,9 @@ const AdminPage2 = () => {
               value={formData.ID || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="Location">Location</label>
+            <br/>
+            <label htmlFor="Location" className='location'>Location</label>
+            <br/>
             <input
               type="text"
               id="Location"
@@ -73,7 +78,9 @@ const AdminPage2 = () => {
               value={formData.Location || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="Description">Description</label>
+            <br/>
+            <label htmlFor="Description" className='description'>Description</label>
+            <br/>
             <input
               type="text"
               id="Description"
@@ -82,7 +89,9 @@ const AdminPage2 = () => {
               value={formData.Description || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="Make">Make</label>
+            <br/>
+            <label htmlFor="Make" className='make'>Make</label>
+            <br/>
             <input
               type="text"
               id="Make"
@@ -91,7 +100,9 @@ const AdminPage2 = () => {
               value={formData.Make || ''}
               onChange={handleInputChange}
             />
-            <input type="submit" value="Submit" />
+            <br/>
+            <input type="submit" value="Submit"  className='submitbtn'/>
+            
           </form>
         </div>
       ) : (
