@@ -148,7 +148,7 @@ const AdminPage2 = () => {
               </table>
               <div>
                 <p className="p_footer">
-                  <a href="/AdminPage1" style={{ textDecoration: 'none', color:'black' }}>
+                  <a href="/AdminPage1" className='backbtn'>
                     &lt; Back
                   </a>
                 </p>

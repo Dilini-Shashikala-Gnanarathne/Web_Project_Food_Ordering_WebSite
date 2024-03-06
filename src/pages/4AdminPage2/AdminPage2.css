@@ -257,3 +257,11 @@
   color: black;
   left: 0;
 }
+
+.backbtn {
+  text-decoration: none;
+  background-color: #50688F;
+  color: white;
+  padding: 2px 6px 2px 6px;
+  border-radius: 10px;
+}
