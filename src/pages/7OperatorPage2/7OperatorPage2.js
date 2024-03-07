@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../components/HomePage.css'; // Import your custom CSS file
 import { auth } from '../../firebase';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';
