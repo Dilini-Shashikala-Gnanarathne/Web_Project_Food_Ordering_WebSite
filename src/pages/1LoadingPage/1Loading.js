@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import centerImage from '../../image/GenX.png';
-import './Loading.css'; // Corrected the typo in the file name
+import './Loading.css';
 
 const Loading = () => {
   const navigate = useNavigate();
@@ -17,11 +17,11 @@ const Loading = () => {
   return (
     <div className="pageStyle">
       <header className="header"></header>
-
+      <main>
       <div className="imageContainerStyle">
         <img src={centerImage} alt="Centered Image" />
       </div>
-
+      </main>
       <footer className="footer">
         <p className="spacedTextStyle footerTextStyle1">GENERATOR X INDUSTRIES</p>
         <p className="footerTextStyle2">Copyright © 2023 All rights reserved by AD Printers</p>
