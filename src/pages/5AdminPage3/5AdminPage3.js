@@ -1,7 +1,6 @@
 // src/components/AdminPage3.js
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../../components/HomePage.css';
 import gen_X from '../../image/Gen Xgenx.png';
 import { auth } from '../../firebase';
 import icon from '../../image/icons8-user-100 1.png';

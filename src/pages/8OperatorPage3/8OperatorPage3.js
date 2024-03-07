@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../components/HomePage.css'; 
 import { auth } from '../../firebase';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';
@@ -22,7 +21,8 @@ const OperatorPage3 = () => {
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>&copy; 2024 Your Websit
+          e. All rights reserved.</p>
     </footer>
 
     </div>

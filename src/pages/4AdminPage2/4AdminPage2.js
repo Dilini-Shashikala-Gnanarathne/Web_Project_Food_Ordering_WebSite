@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaPlusCircle, FaSearch } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.js';
-import '../../components/HomePage.css';
 import './AdminPage2.css';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';

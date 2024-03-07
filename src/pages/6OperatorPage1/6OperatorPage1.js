@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import gen_X from '../../image/Gen Xgenx.png';
 import icon from '../../image/icons8-user-100 1.png';
-import '../../components/HomePage.css';
 import { auth } from '../../firebase.js';
 import admin from '../../image/Admin.png';
 import './OperatorPage1.css';
