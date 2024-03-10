@@ -49,50 +49,59 @@ const AdminPage2 = () => {
       </div>
 
       {formVisibility ? (
-        <div style={{ marginTop: '100px' }}>
-          <form
-            className="formVisibility_form"
-            id="FormInput"
-            onSubmit={handleFormSubmit}>
-            <label htmlFor="ID">Generator ID</label>
-            <input
-              type="text"
-              id="ID"
-              name="ID"
-              placeholder="Generator ID"
-              value={formData.ID || ''}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="Location">Location</label>
-            <input
-              type="text"
-              id="Location"
-              name="Location"
-              placeholder="Location"
-              value={formData.Location || ''}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="Description">Description</label>
-            <input
-              type="text"
-              id="Description"
-              name="Description"
-              placeholder="Description"
-              value={formData.Description || ''}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="Make">Make</label>
-            <input
-              type="text"
-              id="Make"
-              name="Make"
-              placeholder="Make"
-              value={formData.Make || ''}
-              onChange={handleInputChange}
-            />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+         <div style={{ marginTop: '100px' }}>
+         <form
+           className="formVisibility_form"
+           id="FormInput"
+           onSubmit={handleFormSubmit}
+         >
+           <p className='userdetails'>Generator Details Sheet</p>
+           <br/>
+           <label htmlFor="User_ID" className='userid'>Generator ID</label>
+           <br/>
+           <input
+             type="text"
+             id="User_ID"
+             name="User_ID"
+             placeholder="Enter Generator ID"
+             value={formData.User_ID || ''}
+             onChange={handleInputChange}
+           />
+           <br/>
+           <label htmlFor="User_Name" className='username'>Location </label>
+           <br/>
+           <input
+             type="text"
+             id="User_Name"
+             name="User_Name"
+             placeholder="Enter Location"
+             value={formData.User_Name || ''}
+             onChange={handleInputChange}
+           />
+           <br/>  <label htmlFor="Description" className='username'>Description </label>
+           <br/>
+           <input
+             type="text"
+             id="User_Name"
+             name="User_Name"
+             placeholder="Description"
+             value={formData.User_Name || ''}
+             onChange={handleInputChange}
+           />
+           <br/>  
+           <label htmlFor="User_Name" className='username'>Actions </label>
+           <br/>
+           <input
+             type="text"
+             id="User_Name"
+             name="User_Name"
+             placeholder="Actions"
+             value={formData.User_Name || ''}
+             onChange={handleInputChange}
+           />
+           <br/> 
+           <input className='submit' type="submit" value="Submit" />
+         </form></div>
       ) : (
         <div className="imageContainerStyle">
           <button className="buttonIconStyle1" onClick={toggleFormVisibility}>
