@@ -56,44 +56,53 @@ const AdminPage3 = () => {
             id="FormInput"
             onSubmit={handleFormSubmit}
           >
-            <p>User Details Sheet</p>
-            <label htmlFor="User_Name">User Name</label>
+            <p className='userdetails'>User Details Sheet</p>
+            <br/>
+            <label htmlFor="User_Name" className='username'>User Name</label>
+            <br/>
             <input
               type="text"
               id="User_Name"
               name="User_Name"
-              placeholder="User Name"
+              placeholder="Enter User Name"
               value={formData.User_Name || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="User_ID">User ID</label>
+            <br/>
+            <label htmlFor="User_ID" className='userid'>User ID</label>
+            <br/>
             <input
               type="text"
               id="User_ID"
               name="User_ID"
-              placeholder="User ID"
+              placeholder="Enter User ID"
               value={formData.User_ID || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="Password">Password</label>
+            <br/>
+            <label htmlFor="Password" className='pw'>Password</label>
+            <br/>
             <input
               type="password"
               id="Password"
               name="Password"
-              placeholder="Password"
+              placeholder="Enter Password"
               value={formData.Password || ''}
               onChange={handleInputChange}
             />
-            <label htmlFor="NIC">NIC</label>
+            <br/>
+            <label htmlFor="NIC" className='nic'>NIC</label>
+            <br/>
             <input
               type="text"
               id="NIC"
               name="NIC"
-              placeholder="NIC"
+              placeholder="Enter NIC"
               value={formData.NIC || ''}
               onChange={handleInputChange}
             />
-            <input type="submit" value="Submit" />
+            <br/>
+            <input className='submit' type="submit" value="Submit" />
           </form>
         </div>
       ) : (

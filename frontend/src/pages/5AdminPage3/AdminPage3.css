@@ -144,11 +144,109 @@
 
 
 .formVisibility_form {
-  margin: 120px;
-  padding: 50px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+  padding-bottom: 10;
+  padding-left: 10;
+  padding-right: 10;
   align-content: center;
-  color: blue;
+
 }
+
+.userdetails {
+  font-size: 32px;
+  color: black;
+  align-items: center;
+}
+
+.username {
+  color: #50688F;
+  margin: 5px;
+  font-size: 16px;
+}
+
+#User_Name {
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: none;
+  border-bottom-style: double;
+  border-block-color: #50688F;
+  outline: none;
+  width: 20vw;
+  font-size: 16px;
+  
+}
+
+.userid {
+  color: #50688F;
+  margin: 5px;
+  font-size: 16px;
+}
+
+#User_ID {
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: none;
+  border-bottom-style: double;
+  border-block-color: #50688F;
+  outline: none;
+  width: 20vw;
+  font-size: 16px;
+}
+
+.pw {
+  color: #50688F;
+  margin: 5px;
+  font-size: 16px;
+}
+
+#Password{
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: none;
+  border-bottom-style: double;
+  border-block-color: #50688F;
+  outline: none;
+  width: 20vw;
+  font-size: 16px;
+}
+
+.nic {
+  color: #50688F;
+  margin: 5px;
+  font-size: 16px;
+}
+
+#NIC {
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: none;
+  border-bottom-style: double;
+  border-block-color: #50688F;
+  outline: none;
+  width: 20vw;
+  font-size: 16px;
+}
+
+.submit {
+  margin-left: 80px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  width: 10vw;
+  height: 2.5vw;
+  align-content: center;
+  background-color: #50688F;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
 
 .faPlusCircle {
   margin-right: 5px;
